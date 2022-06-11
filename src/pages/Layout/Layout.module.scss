@@ -1,0 +1,30 @@
+.navigationBar {
+  width: 100%;
+  background-color: #242F9B;
+  margin-bottom: 10px;
+  padding: 15px;
+
+
+  ul.listItems {
+    display: flex;
+    align-items: 'space-between';
+
+    li {
+      list-style: none;
+
+      a {
+       padding: 10px 15px;
+       border-color: #DBDFFD;
+       border: 2px solid;
+       border-radius: 5px;
+       color: #DBDFFD;
+       font-weight: 700;
+       margin-right: 10px;
+
+       &:hover {
+         text-decoration: underline;
+       }
+     }
+    }
+  }
+}
