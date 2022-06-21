@@ -1,14 +1,12 @@
 import React, { useState, useContext } from 'react';
+import { useRouter } from 'next/router';
 // import api from '../../../api';
 import { userContext } from '../../../contexts/user/UserContext';
 import styles from './Login.module.scss';
 import Input from '../../UI/Input/Input';
 
-type LoginProps = {
-  changeAuthPageHandler(): void,
-}
-
-const Login = ({ changeAuthPageHandler }: LoginProps) => {
+const Login = () => {
+  const router = useRouter();
   const { login } = useContext(userContext);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -30,7 +28,7 @@ const Login = ({ changeAuthPageHandler }: LoginProps) => {
         </div>
         <button className={styles.form__submitBtn} type="submit" onClick={signupHandler}>Login</button>
       </div>
-      <button type="submit" onClick={changeAuthPageHandler}>Signup</button>
+      <button type="submit" onClick={() => router.push('/signup')}>Signup</button>
     </>
   );
 };
