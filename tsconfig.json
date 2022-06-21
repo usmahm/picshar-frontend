@@ -23,6 +23,8 @@
   },
   "include": [
     "src",
-    "declarations.d.ts",
-  ]
+    "./src/types",
+    "./src/types/environment.d.ts"
+  ],
+  "typeRoots": ["./node_modules/@types", "./src/types"]
 }
