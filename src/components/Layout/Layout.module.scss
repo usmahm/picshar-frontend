@@ -7,12 +7,13 @@
 
   ul.listItems {
     display: flex;
-    align-items: 'space-between';
+    justify-content: space-between;
+    width: 100%;
 
     li {
       list-style: none;
 
-      a {
+      a, .logoutBtn {
        padding: 10px 15px;
        border-color: #DBDFFD;
        border: 2px solid;
@@ -20,6 +21,7 @@
        color: #DBDFFD;
        font-weight: 700;
        margin-right: 10px;
+       background-color: transparent;
 
        &:hover {
          text-decoration: underline;
